@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFF9F0;
+    color: #252322;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EBDD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B263C;
+}
+
+/* Luxury Textile Pattern Overlays */
+.bg-silk-texture {
+  background-image: radial-gradient(#C6A15B 0.75px, transparent 0.75px), radial-gradient(#C6A15B 0.75px, #FFF9F0 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.95;
+}
+
+.bg-dark-texture {
+  background-image: radial-gradient(rgba(198, 161, 91, 0.15) 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Gold Shimmer effect */
+.shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    rgba(198, 161, 91, 0) 0%,
+    rgba(232, 215, 183, 0.4) 50%,
+    rgba(198, 161, 91, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Traditional Assamese Border styling */
+.assamese-border-t {
+  border-top: 2px solid #C6A15B;
+  position: relative;
+}
+
+.assamese-border-t::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 6px;
+  background-color: #7B263C;
+}
+
+/* Smooth Image hover zoom */
+.zoom-effect {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.zoom-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Luxury Gold Leaf Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #DEBE7E 0%, #C6A15B 50%, #9B7836 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Royal Ornamental Gold Border */
+.ornamental-border {
+  position: relative;
+}
+.ornamental-border::before,
+.ornamental-border::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #C6A15B;
+  pointer-events: none;
+}
+.ornamental-border::before {
+  top: 6px;
+  left: 6px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.ornamental-border::after {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+/* Subtle Gold Grain Texture */
+.bg-gold-subtle {
+  background: radial-gradient(circle at 50% 0%, rgba(198, 161, 91, 0.08) 0%, rgba(255, 249, 240, 0.6) 70%, transparent 100%);
+}
+
+
